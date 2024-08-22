@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function btnpress(x) {
+            document.getElementById("t1").value += x;
+        }
+           function cleardata(){
+            document.getElementById("t1").value="";
+           }
+           function result()
+           {
+            var a=document.getElementById("t1").value;
+            var b=eval(a);
+            document.getElementById("t1").value=b;
+           }
+           function backpress()
+           {
+            var a=document.getElementById("t1").value;
+            var b=a.length;
+            var c=a.substr(0,b-1);
+            document.getElementById("t1").value = c;
+           }
+    </script>
+    <style>
+        body  table{
+            height: 350px;
+            width: 200px;
+            background-color: aliceblue;
+              
+        }
+        bottun{
+            color: #33ffff;
+        }
+        table{
+            background-color: gold;
+            border-radius: 20px;
+            border: 0px;
+        }
+        table tr td input{
+            height: 30px;
+            width: 210px;
+            border-color:#ff6699;
+            border-radius: 20px;
+            background-color:whitesmoke;
+            font-size: bold;
+
+        }
+        table tr{
+            background-color:none;
+            border-radius: 20px;
+            border: 0px;
+        }
+        table tr td button{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: red;
+            box-shadow:20px 0px 2px,gold;
+            font-size: bold;
+        }
+        table tr td button:hover{
+            background-color: rgb(65, 225, 73);
+            color: aqua;
+        }
+        .A{
+            background-color: gold;
+        }
+        .B{
+            background-color: gold;
+        }
+        .C{
+            background-color: gold;
+        }
+        .D{
+            background-color: gold;
+        }
+        .E{
+            background-color:#33ffff ;
+        }
+        .f{
+            background-color:#33ffff ;
+        }
+        .g{
+            background-color:#33ffff ;
+        }
+        .h{
+            background-color:#33ffff ;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>calculator</h1>
+    <table>
+        <tr>
+            <td colspan="4"><input id="t1" readonly /> </td>
+        </tr>
+        <tr>
+            <td><button onclick="cleardata()" class="E">C</button></td>
+            <td><button onclick="backpress()" class="f">&larr;</button></td>
+            <td><button onclick="result()" class="g">=</button></td>
+            <td><button onclick="btnpress('/')" class="h">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="btnpress('7')">7</button></td>
+            <td><button onclick="btnpress('8')">8</button></td>
+            <td><button onclick="btnpress('9')">9</button></td>
+            <td><button onclick="btnpress('%')" class="D">%</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="btnpress('4')">4</button></td>
+            <td><button onclick="btnpress('5')">5</button></td>
+            <td><button onclick="btnpress('6')">6</button></td>
+            <td><button onclick="btnpress('*')" class="C">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="btnpress('1')">1</button></td>
+            <td><button onclick="btnpress('2')">2</button></td>
+            <td><button onclick="btnpress('3')">3</button></td>
+            <td><button onclick="btnpress('-')" class="B">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="btnpress('0')">0</button></td>
+            <td><button onclick="btnpress('.')">.</button></td>
+            <td><button onclick="btnpress('00')">00</button></td>
+            <td><button onclick="btnpress('+')" class="A">+</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
